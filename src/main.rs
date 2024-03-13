@@ -15,7 +15,7 @@ fn main() -> Result<(), io::Error> {
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 2 {
-        eprintln!("Usage: program.exe <folder>");
+        eprintln!("Usage: sha256sorter.exe <folder>");
         return Ok(());
     }
 
@@ -38,7 +38,7 @@ fn main() -> Result<(), io::Error> {
 
     files.sort_by(|a, b| a.1.cmp(&b.1));
 
-    println!("Files sorted by SHA256 checksum:");
+    println!("Files sorted by SHA256 checksum ^-^ :");
     println!("---------------------------------");
     
     for (file_name, checksum) in &files {
